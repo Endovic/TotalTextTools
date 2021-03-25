@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="styles.css">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
+        <title>TTText.filters</title>
+        <script src="code_filters.js"></script>
+    </head>
+    <body onload="loadFilters()">
+        <div class="page-content flex-footer">
+            <br>
+            <h2>Parameters<img src="alt_logo.jpg" alt="Logo" width="100" height="40"></h2>
+
+            <!--classes "container", "row", "col" from Bootstrap Grid System-->
+            <!--https://www.tutorialrepublic.com/twitter-bootstrap-tutorial/bootstrap-grid-system.php-->
+            <form class="container">
+                <div class="row">
+
+                    <div class="col-lg-4 col-md-6 col-sm-12">
+                        <label class="row align-items-center">
+                            <input type="checkbox" id="check1" checked>
+                            &nbsp;
+                            Text length
+                        </label>
+                        <label class="row align-items-center">
+                            <input type="checkbox" id="check2" checked>
+                            &nbsp;
+                            Character count
+                        </label>
+                        <label class="row align-items-center last-row">
+                            <input type="checkbox" id="check3" checked>
+                            &nbsp;
+                            Letter count
+                        </label><br>
+                    </div>
+
+                    <div class="col-lg-4 col-md-6 col-sm-12">
+                        <label class="row align-items-center">
+                            <input type="checkbox" id="check4" checked>
+                            &nbsp;
+                            Word count
+                        </label>
+                        <label class="row align-items-center">
+                            <input type="checkbox" id="check5" checked>
+                            &nbsp;
+                            Different words count
+                        </label>
+                        <label class="row align-items-center last-row">
+                            <input type="checkbox" id="check6" checked>
+                            &nbsp;
+                            Longest word
+                        </label><br>
+                    </div>
+
+                    <div class="col-lg-4 col-md-6 col-sm-12">
+                        <label class="row align-items-center">
+                            <input type="checkbox" id="check7" checked>
+                            &nbsp;
+                            Sentence count
+                        </label>
+                        <label class="row align-items-center">
+                            <input type="checkbox" id="check8" checked>
+                            &nbsp;
+                            Average no. words/sentence
+                        </label>
+                        <label class="row align-items-center last-row">
+                            <input type="checkbox" id="check9" checked>
+                            &nbsp;
+                            Readability score
+                        </label><br>
+                    </div>
+
+                </div>
+            </form>
+            <br>
+            <button class="default-button" onclick="checkAll()">Restore default/Select all</button><br><br><br>
+            <input class="save-cancel-button" type="submit" value="save preferences" onclick="saveChanges(); gotoIndex()"><br><br>
+            <input class="save-cancel-button" type="submit" value="cancel changes" onclick="cancelChanges(); gotoIndex()"><br><br>
+        </div>
+        <footer>
+            <i>designed for</i> CS50 <i>by</i> <b>Endovic</b> 2020
+        </footer>
+    </body>
+</html>

@@ -1,0 +1,264 @@
+/*https://www.thesitewizard.com/css/mobile-friendly-responsive-design.shtml*/
+@viewport
+{
+  width: device-width ;
+  zoom: 1.0 ;
+}
+
+/* || SITE-WIDE */
+
+/* I- see footer (sticky footer with flexbox)*/
+html, body
+{
+    height: 100%;
+}
+
+/* II- see footer (sticky footer with flexbox)*/
+body
+{
+    display: flex;
+    flex-direction: column;
+}
+
+/* III- see footer (sticky footer with flexbox)*/
+.flex-footer
+{
+    flex: 1 0 auto;
+}
+
+/* IV- https://css-tricks.com/couple-takes-sticky-footer/*/
+footer
+{
+    flex-shrink: 0;
+    text-align: center;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    padding-bottom: 1em;
+    font-size: small;
+    z-index: -1;
+}
+
+/* || INDEX PAGE */
+
+.homepage-content
+{
+    text-align: center;
+}
+
+.slogan
+{
+    font-size: large;
+}
+
+.homepage-grid
+{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: auto auto;
+    grid-template-areas: "left ct ct right"
+                         "left cl cr right";
+}
+
+.text-box
+{
+    grid-column: ct;
+}
+
+.row-flex
+{
+    grid-column: cl;
+    display: flex;
+    flex-direction: row;
+}
+
+.submit-button
+{
+    text-align: left;
+    width: min-content;
+}
+
+/*https://stackoverflow.com/questions/19502835/is-it-possible-to-change-between-two-fontawesome-icons-on-hover*/
+#i:hover #i-clear, #i #i-hov
+{
+    display: none;
+}
+
+#i:hover #i-hov
+{
+    display: inline-flex;
+}
+
+.custom-button
+{
+    grid-column: cr;
+    text-align: right;
+    width: max-content;
+    justify-self: end;
+    border: none;
+    padding: 0;
+    background: none;
+}
+
+.custom-button:hover
+{
+    color: gray;
+}
+
+/* || GENERAL PAGE */
+
+.page-content
+{
+    overflow: hidden;
+    margin-left: 5%;
+    margin-right: 5%;
+    width: 80%;
+}
+
+.appended-content
+{
+    margin-top: 50px;
+}
+
+/* || FILTERS PAGE */
+
+h2 > img
+{
+    vertical-align: text-bottom;
+    position: relative;
+    animation-name: crawl;
+    animation-duration: 0.5s;
+    z-index: -1;
+}
+
+@keyframes crawl
+{
+    from {left: -100%;}
+    to {left: 0%};
+}
+
+.container
+{
+    margin-top: 50px;
+    font-weight: bold;
+    line-height: 2.2;
+}
+
+.last-row
+{
+    margin-bottom: -0.5em;
+}
+
+[type=checkbox]
+{
+    /*improve aesthetics in Chrome*/
+    zoom: 1.5;
+}
+
+.default-button
+{
+    border-radius: 8px;
+}
+
+.save-cancel-button
+{
+    width: 9em;
+}
+
+/* || RESULTS PAGE */
+
+table
+{
+    width: 100%;
+    font-size: large;
+    line-height: 2.2;
+    border-bottom-style: solid;
+    border-bottom-width: thin;
+    border-bottom-color: #eee;
+}
+
+tr:nth-child(odd)
+{
+    background: #eee;
+}
+
+td:nth-child(even)
+{
+    text-align: center;
+    width: 35%;
+    /*http://css-workshop.com/wrap-text-in-table-cell/*/
+    word-break: break-all;
+}
+
+td:nth-child(odd)
+{
+    width: 65%;
+}
+
+a
+{
+    display: block;
+    font-size: x-small;
+    width: max-content;
+}
+
+.spelling-button
+{
+    border: none;
+    padding: 0;
+    background: none;
+    margin-top: 20px;
+}
+
+.spelling-button:hover
+{
+    font-size: large;
+}
+
+span
+{
+    vertical-align: text-top;
+}
+
+/* || SPELLER PAGE */
+
+.speller-grid
+{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: auto auto;
+    grid-template-areas: "l l r"
+                         "w w m";
+}
+
+#intro
+{
+    grid-column: l;
+    font-size: x-large;
+}
+
+#goto-options
+{
+    grid-column: r;
+}
+
+#list
+{
+    grid-column: w;
+    margin-top: 25px;
+    word-break: break-all;
+    font-size: large;
+}
+
+.back-button
+{
+    border: none;
+    padding: 0;
+    background: none;
+    margin-top: 5px;
+}
+
+.back-button:hover
+{
+    text-shadow:0 0 1px black;
+}
